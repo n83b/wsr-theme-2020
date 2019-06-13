@@ -233,6 +233,9 @@ body{
 
 .headerBG{
   background-color: #2f4061;
+}
+
+.home .headerBG{
   padding-bottom: 30px
 }
 
@@ -256,6 +259,7 @@ body{
   max-width: 900px;
   width: 100%;
   max-height: 100%;
+  margin-top: 50px;
 }
 
 .socialLinks{
@@ -286,6 +290,10 @@ body{
 }
 
 @media (min-width: 768px) {
+  .home .headerBG img{
+    margin-top: 0;
+  }
+
   .socialLinks{
     right: 30px;
   }
@@ -296,7 +304,7 @@ body{
 /* //// Home /////////////////////////////////////////////////*/
 
 h1.title{
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 .subtitle{
@@ -316,9 +324,6 @@ h1.title{
 }
 
 @media (min-width: 768px) {
-  h1.title{
-    padding-top: 80px;
-  }
 
   .homeTitleContent{
     padding: 50px 30px 100px 30px;
