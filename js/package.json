@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.7.0",
-    "react-burger-menu": "^2.5.4",
     "react-dom": "^16.7.0"
   },
   "devDependencies": {

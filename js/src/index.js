@@ -1,44 +1,40 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Menu from "react-burger-menu/lib/menus/scaleDown";
+//import React from "react";
+//import ReactDOM from "react-dom";
+const siteURL = wsr_ajax.siteurl;
 
-const siteURL = 'http://dev.test.com';
+// class WSRMenu extends React.Component {
 
-class WSRMenu extends React.Component {
+//   constructor(props){
+//     super(props);
+//     this.state ={
+//       menu: []
+//     }
+//   }
 
-  constructor(props){
-    super(props);
-    this.state ={
-      menu: []
-    }
-  }
+//   componentDidMount() {
+//     fetch(siteURL + '/wp-json/wsr/menu')
+//       .then(res => res.json())
+//       .then(
+//         (result) => {
+//           this.setState({
+//             menu: result
+//           })
+//         }
+//       )
 
-  componentDidMount() {
-    fetch(siteURL + '/wp-json/wsr/menu')
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            menu: result
-          })
-        }
-      )
+//   }
 
-  }
+//   render() {
+//     return (
+//       <ul>
+//         {this.state.menu.map(item => (
+//           <li id={item.ID}><a className="menu-item" href={item.url}>
+//             {item.title}
+//           </a></li>
+//         ))}
+// 	   </ul>
+//     );
+//   }
+// }
 
-  render() {
-    return (
-      <Menu right pageWrapId={"page-wrap"} outerContainerId={"body"}>
-
-        {this.state.menu.map(item => (
-          <a id={item.ID} className="menu-item" href={item.url}>
-            {item.title}
-          </a>
-        ))}
-        
-      </Menu>
-    );
-  }
-}
-
-ReactDOM.render(<WSRMenu />, document.getElementById("wsr-menu"));
+// ReactDOM.render(<WSRMenu />, document.getElementById("wsr-menu"));

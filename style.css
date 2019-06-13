@@ -1,10 +1,10 @@
 /*
-Theme Name: WSR Theme 2020
-Author: WSR
+Theme Name: Websector Starter Theme 2020
+Author: Websector
 Author URI: 
-Description: For use with Guttenberg, React and css grids
+Description: Minimal Starter theme
 Version: 1.0.0
-Text Domain: wsrtheme2020
+Text Domain: websector
 */
 
 /* //// CSS Reset /////////////////////////////////////////////////*/
@@ -45,71 +45,389 @@ img {
   height: auto;
 }
 
-/* //// burger button /////////////////////////////////////////////////*/
 
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 15px;
+
+/* //// Grid /////////////////////////////////////////////////*/
+
+.row{
+  display: block;
+  position: relative;
 }
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
+.col,
+.col25,
+.col33,
+.col50{
+  padding: 30px;
 }
 
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
+@media (min-width: 768px) {
+  .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .col25{
+    width: 25%;
+  }
+
+  .col33{
+    width: 33.33333%;
+  }
+
+  .col50{
+    width: 50%;
+  }
 }
 
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
+
+
+/* //// Base fonts /////////////////////////////////////////////////*/
+@font-face {
+    font-family: 'GuardianSans';
+    src: url('webfonts/GuardianSansCondRegular/GuardianSansCond-Regular.eot'); 
+    src: url('webfonts/GuardianSansCondRegular/GuardianSansCond-Regular.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/GuardianSansCondRegular/GuardianSansCond-Regular.woff2') format('woff2'),
+        url('webfonts/GuardianSansCondRegular/GuardianSansCond-Regular.woff') format('woff'),
+        url('webfonts/GuardianSansCondRegular/GuardianSansCond-Regular.svg#svgFontName') format('svg');
+    font-display: auto;
+    font-weight: normal;
 }
 
-/* General sidebar styles */
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+@font-face {
+    font-family: 'GuardianSans';
+    src: url('webfonts/GuardianSansCondLight/GuardianSansCond-Light.eot'); 
+    src: url('webfonts/GuardianSansCondLight/GuardianSansCond-Light.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/GuardianSansCondLight/GuardianSansCond-Light.woff2') format('woff2'),
+        url('webfonts/GuardianSansCondLight/GuardianSansCond-Light.woff') format('woff'),
+        url('webfonts/GuardianSansCondLight/GuardianSansCond-Light.svg#svgFontName') format('svg');
+    font-display: auto;
+    font-weight:300;
 }
 
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
+@font-face {
+    font-family: 'GuardianSans';
+    src: url('webfonts/GuardianSansCondBold/GuardianSansCond-Bold.eot'); 
+    src: url('webfonts/GuardianSansCondBold/GuardianSansCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/GuardianSansCondBold/GuardianSansCond-Bold.woff2') format('woff2'),
+        url('webfonts/GuardianSansCondBold/GuardianSansCond-Bold.woff') format('woff'),
+        url('webfonts/GuardianSansCondBold/GuardianSansCond-Bold.svg#svgFontName') format('svg');
+    font-display: auto;
+    font-weight:500;
 }
 
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
+html{
+  font-family: 'GuardianSans', sans-serif;
+  color: #7a7a7a; 
+}
+  
+
+h1{
+  font-size: 24px;
+  line-height: 1.17;
+  font-weight: 500;
+  padding-bottom: 0;
+  text-align: center;
+  color: #3b373a;
+  text-transform: uppercase;
 }
 
-/* Individual item */
-.bm-item {
-  color: #b8b7ad;
-  display: inline-block;
+h2{
+  font-size: 22px;
+  line-height: 47px;
 }
 
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+h3{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  margin-top: 43px;
+  text-transform: uppercase;
+  color: #2f4061;
 }
 
-/* //// Styles /////////////////////////////////////////////////*/
+h4{
+  font-size: 36px;
+  line-height: 1.5;
+  color: #3b373a;
+}
+
+p{
+  font-family: 'Rubik',sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+a{
+  color: #2f4061;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #B3CD41!important;
+}
+
+#page-wrap ol,
+#page-wrap ul{
+  list-style-position: outside;
+  margin-left: 30px;
+  font-size: inherit;
+  line-height: 31px;
+  padding: 20px;
+}
+
+#page-wrap ol{
+  list-style-type: decimal;
+}
+
+#page-wrap ul{
+  list-style-type: disc;
+}
+
+@media (min-width: 768px) {
+  h1{
+    font-size: 48px;
+    line-height: 1.17;
+  }
+
+  h2{
+    font-size: 32px;
+    line-height: 47px;
+  }
+
+  h3{
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  h4{
+    font-size: 36px;
+    line-height: 1.5;
+  }
+
+  p{
+    line-height: 28px;
+  }
+} 
+
+
+/* //// Header /////////////////////////////////////////////////*/
+body{
+  position: relative;
+  background-color: #2f4061;
+}
+
 #page-wrap {
   min-height: 600px;
+  background-color: #fff;
+  padding-bottom: 150px;
 }
+
+.headerBG{
+  background-color: #2f4061;
+  padding-bottom: 30px
+}
+
+.headerBG .col{
+  padding: 0;
+  margin-right: auto;
+}
+
+.home .headerBG .col{
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headerBG img{
+  max-width: 110px;
+  width: 100%;
+}
+
+.home .headerBG img{
+  max-width: 900px;
+  width: 100%;
+  max-height: 100%;
+}
+
+.socialLinks{
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  margin-left: auto;
+}
+
+.home .socialLinks{
+  top: 10px;
+}
+
+.socialLinks i{
+  color: #fff;
+  font-size: 24px;
+  padding: 5px;
+}
+
+.socialLinks a:hover > i{
+  color: #B3CD41!important;
+}
+
+.greenLine{
+  background-color: #B3CD41;
+  width: 100%;
+  height: 15px;
+}
+
+@media (min-width: 768px) {
+  .socialLinks{
+    right: 30px;
+  }
+}
+
+
+
+/* //// Home /////////////////////////////////////////////////*/
+
+h1.title{
+  padding-top: 50px;
+}
+
+.subtitle{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2f4061;
+}
+
+.homeTitleContent{
+  text-align: center;
+  padding: 30px 30px 100px 30px;
+  border-bottom: 5px solid #f8f8f8;
+}
+
+.rowBG:nth-child(odd){
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 768px) {
+  h1.title{
+    padding-top: 80px;
+  }
+
+  .homeTitleContent{
+    padding: 50px 30px 100px 30px;
+  }
+}
+
+
+
+/* //// Archive /////////////////////////////////////////////////*/
+
+.archiveImge{
+  text-align: center;
+}
+
+.archiveImge img{
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.23);
+  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.23);
+  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.23);
+  max-width: 70%;
+}
+
+.blog-archive-title a{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.archiveExcerpt p{
+  font-size: 20px;
+  color: #3b373a;
+}
+
+.rowBG .row{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* //// Single /////////////////////////////////////////////////*/
+
+.breadcrumb{
+  padding-top: 20px;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumb a{
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  position: relative;
+  color: #2f4061;
+}
+
+.singleMeta{
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  position: relative;
+  color: #2f4061;
+  text-align: center;
+}
+
+.blogDateMeta{
+  color: #3b373a;
+}
+
+.singleThumbail{
+  text-align: center;
+}
+
+.singleContent{
+  position: relative;
+}
+
+.singleContent .row{
+  max-width: 700px;
+}
+
+
+
+/* //// Footer /////////////////////////////////////////////////*/
+footer{
+  height: 50px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .singleMeta{
+    font-size: 16px;
+  }
+}
+
+
 
 /* //// Media Queries /////////////////////////////////////////////////*/
 @media (max-width: 767px) {
 }
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}
 @media (min-width: 992px) {
 }
 @media (min-width: 1200px) {

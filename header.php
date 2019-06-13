@@ -10,12 +10,26 @@
 
 <body id="body" <?php body_class(); ?> >
 
-    <?php //custom logo - Set in customiser
-    if ( function_exists( 'the_custom_logo' ) ) {
-        the_custom_logo();
-    } ?>
+<div class="headerBG">
+    <div class="row">
+        <div class="col">
+            <a href="<?php echo get_home_url()?>"><img src="<?php echo get_stylesheet_directory_uri()?>/img/safety-geek.svg" alt="<?php echo get_bloginfo('name') . ' - ' . get_bloginfo('description') ?>" /></a>
+        </div>
+        <div class="socialLinks">
+            <a target="_blank" href="<?php echo esc_attr( get_option('safetygeek_facebbok') ); ?>"><i class="fab fa-facebook-f"></i></a>
+            <a target="_blank" href="<?php echo esc_attr( get_option('safetygeek_linkedin') ); ?>"><i class="fab fa-linkedin-in"></i></a>
+            <a target="_blank" href="<?php echo esc_attr( get_option('safetygeek_insta') ); ?>"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="mailto:<?php echo esc_attr( get_option('safetygeek_mail') ); ?>"><i class="far fa-envelope"></i></a>
+        </div>
+    </div>
+</div>
+<div class="greenLine"></div>
 
-    <div id="wsr-menu"></div>
+
+
+    
+
+    <!-- <div id="wsr-menu"></div> -->
     <?php /* wp_nav_menu( array(  
         'menu'              => 'primary',
         'theme_location'    => 'primary',

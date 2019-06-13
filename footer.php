@@ -11,7 +11,10 @@
         )); */ ?>
 
     </div>
-
-   <?php wp_footer(); ?>		
+    <div class="greenLine"></div>
+    <footer>
+        
+         <?php wp_footer(); ?>  
+    </footer>
 </body>
 </html>
