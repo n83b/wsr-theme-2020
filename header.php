@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri()?>/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri()?>/img/favicon-16x16.png">
     <?php wp_head(); ?>
 </head>
 
